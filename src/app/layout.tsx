@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "관광 AR 체험",
-  description: "관광용 체험 및 몰입형 AR 콘텐츠 모바일 웹앱",
+  title: "무릉별 라벤더 축제",
+  description: "무릉별 라벤더 축제 · 몰입형 AR 관광 체험 모바일 웹앱",
 };
 
 export const viewport: Viewport = {
