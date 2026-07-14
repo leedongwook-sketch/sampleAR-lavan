@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+certificates
+
+# markdown 문서 (기획/메모 등은 커밋 제외). 저장소 핵심 문서는 유지.
+*.md
+!README.md
+!CLAUDE.md
+!AGENTS.md

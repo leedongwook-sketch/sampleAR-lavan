@@ -1,0 +1,22 @@
+{
+  "imagePath": "image-targets/target3_luminance.jpg",
+  "resources": {
+    "originalImage": "target3_original.jpg",
+    "croppedImage": "target3_cropped.jpg",
+    "thumbnailImage": "target3_thumbnail.jpg",
+    "luminanceImage": "target3_luminance.jpg"
+  },
+  "name": "target3",
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 0,
+    "width": 480,
+    "height": 480,
+    "isRotated": false,
+    "originalWidth": 480,
+    "originalHeight": 480
+  },
+  "loadAutomatically": true,
+  "metadata": null
+}

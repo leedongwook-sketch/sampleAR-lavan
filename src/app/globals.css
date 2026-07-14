@@ -10,6 +10,23 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* 라벤더 테마 팔레트 (인트로/축제 화면 기준 색 토큰) */
+  --color-night: #0b0814;
+  --color-night-2: #0f0a1f;
+  --color-lavender-50: #f0ebff;
+  --color-lavender-100: #e9d5ff;
+  --color-lavender-200: #d8b4fe;
+  --color-lavender-300: #c084fc;
+  --color-lavender-400: #a855f7;
+  --color-violet-500: #7c3aed;
+  --color-violet-600: #6d28d9;
+  --color-muted-lav: #9080b8;
+
+  /* 한글 세리프/산세리프 폰트 (layout.tsx 의 Google Fonts link 로 로드) */
+  --font-serif-kr: "Noto Serif KR", serif;
+  --font-sans-kr: "Noto Sans KR", sans-serif;
+  --font-display: "Cormorant", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,3 +41,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 인트로 페이드: 페이드인 → 유지 → 페이드아웃 (총 2초). */
+@keyframes intro-fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-intro-fade {
+  animation: intro-fade 2000ms ease-in-out forwards;
+}
+
+
