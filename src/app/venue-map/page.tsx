@@ -3,8 +3,8 @@
 import { useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import Image from "next/image";
-import { AlertTriangle, Sparkles, ZoomIn, ZoomOut } from "lucide-react";
-import { arHref, BASE_PATH } from "@/constants";
+import { AlertTriangle, ZoomIn, ZoomOut } from "lucide-react";
+import { BASE_PATH } from "@/constants";
 import { DetailPageLayout } from "@/components/common/detail-page-layout";
 import { useI18n } from "@/features/i18n";
 import {
@@ -84,25 +84,6 @@ export default function VenueMapPage() {
             >
               {zoomed ? <ZoomOut size={14} /> : <ZoomIn size={14} />}
               {zoomed ? t("venueMap.zoomReset") : t("venueMap.zoom")}
-            </button>
-
-            {/* AR로 확인하기 (지도 위 고정, 추후 AR 컨텐츠 연계) */}
-            <button
-              type="button"
-              onClick={() => window.location.assign(arHref("map"))}
-              className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs"
-              style={{
-                background: "linear-gradient(135deg, #7c3aed, #9d5cf5)",
-                border: "1px solid rgba(233,213,255,0.5)",
-                color: "#fff",
-                fontFamily: sans,
-                fontWeight: 500,
-                boxShadow: "0 0 20px rgba(124,58,237,0.5)",
-                backdropFilter: "blur(8px)",
-              }}
-            >
-              <Sparkles size={14} />
-              {t("venueMap.arButton")}
             </button>
           </div>
           <p
