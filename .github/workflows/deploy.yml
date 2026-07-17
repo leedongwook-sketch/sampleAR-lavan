@@ -31,6 +31,10 @@ jobs:
         env:
           # 프로젝트 페이지 서브경로: https://<user>.github.io/sampleAR-lavan/
           NEXT_PUBLIC_BASE_PATH: /sampleAR-lavan
+          # 카카오맵 JavaScript 키 — 레포 Secret 으로 주입 (코드/워크플로에 하드코딩 금지).
+          # Settings → Secrets and variables → Actions → New repository secret
+          #   Name: NEXT_PUBLIC_KAKAO_MAP_KEY
+          NEXT_PUBLIC_KAKAO_MAP_KEY: ${{ secrets.NEXT_PUBLIC_KAKAO_MAP_KEY }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
