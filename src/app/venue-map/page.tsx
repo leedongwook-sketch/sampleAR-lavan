@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import { AlertTriangle, Sparkles, ZoomIn, ZoomOut } from "lucide-react";
-import { arHref } from "@/constants";
+import { arHref, BASE_PATH } from "@/constants";
 import { DetailPageLayout } from "@/components/common/detail-page-layout";
 import { useI18n } from "@/features/i18n";
 import {
@@ -58,7 +58,7 @@ export default function VenueMapPage() {
             <div className="w-full overflow-auto" style={{ maxHeight: "70vh" }}>
               <div style={{ width: zoomed ? "220%" : "100%" }}>
                 <Image
-                  src="/img/venue/venue-map.png"
+                  src={`${BASE_PATH}/img/venue/venue-map.png`}
                   alt={t("menu.venueMap")}
                   width={1185}
                   height={495}
